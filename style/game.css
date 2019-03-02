@@ -9,7 +9,6 @@ body {
   background-color: black;
 }
 
-
 #score_player1,
 #score_player2 {
   position: absolute;
@@ -18,7 +17,7 @@ body {
 }
 
 #score_player1 {
-  left: 150px;
+  left: 155px;
   top: 50px;
   background-color: greenyellow;
 }
@@ -28,6 +27,14 @@ body {
   top: 50px;
   background-color: blue;
   color: white;
+}
+
+#divider {
+  position: absolute;
+  height: 400px;
+  width: 1px;
+  background-color: white;
+  border: 1px dashed gray;
 }
 
 #player,
