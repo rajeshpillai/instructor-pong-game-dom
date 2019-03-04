@@ -7,6 +7,10 @@ class Game {
 
     this.keyPressed = {};
 
+    this.start = this.start.bind(this);
+    this.update = this.update.bind(this);
+    this.draw = this.draw.bind(this);
+
     document.addEventListener("keydown", function(e) {
       handleEvent(e);
     });
@@ -16,20 +20,17 @@ class Game {
     });
 
     function handleEvent(e) {
-      var keyName = Game.keys[e.which];
+      let keyName = Game.keys[e.which];
       if (keyName) {
         e.preventDefault();
         self.keyPressed[keyName] = e.type === "keydown";
       }
-
-      console.log(self.keyPressed);
     }
   }
 }
 
 Game.prototype.start = function() {
-  var self = this;
-
+  let self = this;
   (function loop() {
     window.requestAnimationFrame(loop);
     self.update();

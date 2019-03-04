@@ -24,13 +24,13 @@ class Bot extends Paddle {
     bot.style.left = this.x + "px";
     bot.style.top = this.y + "px";
   }
+
   update() {
-    var self = this;
     // Bot will follow the ball (simple AI)
-    if (self.y < self.game.ball.y) {
-      self.yVelocity = self.speed;
-    } else if (self.y > self.game.ball.y) {
-      self.yVelocity = -self.speed;
+    if (this.y < this.game.ball.y) {
+      this.yVelocity = this.speed;
+    } else if (this.y > this.game.ball.y) {
+      this.yVelocity = -this.speed;
     }
     super.update();
   }
